@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "140848173938",
+    "project_id": "realtimechatappflutter",
+    "storage_bucket": "realtimechatappflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140848173938:android:df5c0caf15e5bd055643eb",
+        "android_client_info": {
+          "package_name": "com.example.chatapp_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjU9KRDhFMIHHy_Owf_ns-906v7Y9vjAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

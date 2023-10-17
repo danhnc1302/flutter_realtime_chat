@@ -14,6 +14,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final formKey = GlobalKey<FormState>();
   String email = "";
   String password = "";
+  String userName = "";
   bool _isLoading = false;
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       )),
                   onChanged: (val) {
                     setState(() {
-                      password = val;
+                      userName = val;
                     });
                   },
                   validator: (val) {

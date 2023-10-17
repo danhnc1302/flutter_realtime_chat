@@ -5,19 +5,20 @@ import 'package:flutter_realtime_chat/shared/constants.dart';
 import 'package:flutter_realtime_chat/pages/home_page.dart';
 import 'package:flutter_realtime_chat/helper/helper_function.dart';
 import 'package:flutter_realtime_chat/pages/auth/login_page.dart';
+
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  if(kIsWeb) {
-    await Firebase.initializeApp(
-      options: FirebaseOptions(
-        apiKey: Constants.apiKey, 
-        appId: Constants.appId, 
-        messagingSenderId: Constants.messagingSenderId, 
-        projectId: Constants.projectId) 
-    ); 
-  } else {
-    await Firebase.initializeApp();
-  }
+  // WidgetsFlutterBinding.ensureInitialized();
+  // if(kIsWeb) {
+  //   await Firebase.initializeApp(
+  //     options: FirebaseOptions(
+  //       apiKey: Constants.apiKey,
+  //       appId: Constants.appId,
+  //       messagingSenderId: Constants.messagingSenderId,
+  //       projectId: Constants.projectId)
+  //   );
+  // } else {
+  //   await Firebase.initializeApp();
+  // }
   runApp(const MyApp());
 }
 
@@ -29,27 +30,29 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   bool _isSignedIn = false;
 
-  @override
-  void initState() {
-    super.initState();
-    getUserLoggedInStatus();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   getUserLoggedInStatus();
+  // }
 
-  getUserLoggedInStatus() async {
-    await HelperFunctions.getUserLoggedInStatus().then((value) => {
-      if(value != null) {
-        _isSignedIn = value
-      }
-    });
-  }
+  // getUserLoggedInStatus() async {
+  //   await HelperFunctions.getUserLoggedInStatus().then((value) => {
+  //     if(value != null) {
+  //       _isSignedIn = value
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          primaryColor: Constants().primaryColor,
+          scaffoldBackgroundColor: Colors.white),
       home: _isSignedIn ? const HomePage() : const LoginPage(),
     );
   }

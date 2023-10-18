@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chatapp_firebase">
+    package="com.example.flutter_realtime_chat">
+
     <application
         android:label="flutter_realtime_chat"
         android:name="${applicationName}"

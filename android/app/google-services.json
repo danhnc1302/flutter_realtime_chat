@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:140848173938:android:df5c0caf15e5bd055643eb",
         "android_client_info": {
-          "package_name": "com.example.chatapp_firebase"
+          "package_name": "com.example.flutter_realtime_chat"
         }
       },
       "oauth_client": [],
